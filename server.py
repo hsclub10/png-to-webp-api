@@ -32,7 +32,7 @@ def convert():
         print(f"변환 실패: {str(e)}")
         return f"변환 실패: {str(e)}", 500
 
+# ✅ Render가 포트를 감지할 수 있도록 설정
 if __name__ == "__main__":
-    app.run(debug=True)
-port = int(os.environ.get("PORT", 5000))  
-app.run(host="0.0.0.0", port=port, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Render에서 환경 변수 PORT 사용
+    app.run(host="0.0.0.0", port=port, debug=True)  # 0.0.0.0으로 설정해서 외부 접근 가능하게 함

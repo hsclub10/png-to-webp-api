@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG to WebP 변환기</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>PNG to WebP 변환기</h1>
+    
+    <!-- 드래그 앤 드롭 영역 -->
+    <div id="drop-area">
+        <p>여기에 파일을 드래그 앤 드롭하세요</p>
+        <input type="file" id="upload" accept="image/png">
+    </div>
+    
+    <button id="convert">변환하기</button>
+    <p id="message"></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

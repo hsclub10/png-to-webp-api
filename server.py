@@ -1,9 +1,11 @@
 from flask import Flask, request, send_file, render_template, send_from_directory
+from flask_cors import CORS  # ✅ CORS 라이브러리 추가
 from PIL import Image
 import io
 import os
 
 app = Flask(__name__)
+CORS(app)  # ✅ 모든 요청에 대해 CORS 허용
 
 # ✅ 정적 파일 제공 (script.js, styles.css)
 @app.route('/static/<path:filename>')
